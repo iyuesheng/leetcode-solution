@@ -12,6 +12,7 @@ public class No_1071_GreatestCommonDivisorOfStrings {
         if (l2 == 0) {
             return str1;
         }
+
         if (l1 < l2) {
             return gcdOfStrings(str2, str1);
         }
