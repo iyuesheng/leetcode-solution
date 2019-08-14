@@ -1,20 +1,12 @@
-package org.dullnull.solution.easy;
+package org.dullnull.solution.tree;
+
+import org.dullnull.solution.common.TreeNode;
 
 /**
  * @author iisheng
  * @date 2019/08/10 17:37:40
  */
 public class No_0111_MinimumDepthOfBinaryTree {
-
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     public int minDepth(TreeNode root) {
         if (root == null) {

@@ -1,4 +1,4 @@
-package org.dullnull.solution.easy;
+package org.dullnull.solution.thread;
 
 /**
  * @author iisheng

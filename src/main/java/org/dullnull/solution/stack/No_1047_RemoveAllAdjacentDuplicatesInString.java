@@ -1,4 +1,4 @@
-package org.dullnull.solution.easy;
+package org.dullnull.solution.stack;
 
 import java.util.Stack;
 

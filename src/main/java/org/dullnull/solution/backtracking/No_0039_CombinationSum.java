@@ -1,4 +1,4 @@
-package org.dullnull.solution.medium;
+package org.dullnull.solution.backtracking;
 
 import java.util.ArrayList;
 import java.util.List;

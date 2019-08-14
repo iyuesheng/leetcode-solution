@@ -1,4 +1,4 @@
-package org.dullnull.solution.easy;
+package org.dullnull.solution.hashtable;
 
 import java.util.ArrayList;
 import java.util.List;

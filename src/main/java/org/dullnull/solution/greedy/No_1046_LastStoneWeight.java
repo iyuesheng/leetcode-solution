@@ -1,4 +1,4 @@
-package org.dullnull.solution.easy;
+package org.dullnull.solution.greedy;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;

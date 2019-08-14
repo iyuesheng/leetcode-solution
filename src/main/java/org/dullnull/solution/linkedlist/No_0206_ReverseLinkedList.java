@@ -1,19 +1,12 @@
-package org.dullnull.solution.easy;
+package org.dullnull.solution.linkedlist;
+
+import org.dullnull.solution.common.ListNode;
 
 /**
  * @author iisheng
  * @date 2019/08/10 16:55:14
  */
 public class No_0206_ReverseLinkedList {
-
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
     public ListNode reverseList(ListNode head) {
         ListNode newHead = null;

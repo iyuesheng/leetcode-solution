@@ -1,20 +1,12 @@
-package org.dullnull.solution.medium;
+package org.dullnull.solution.tree;
+
+import org.dullnull.solution.common.TreeNode;
 
 /**
  * @author iisheng
  * @date 2019/08/08 17:30:37
  */
 public class No_0236_LowestCommonAncestorOfABinaryTree {
-
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null || root == p || root == q) {

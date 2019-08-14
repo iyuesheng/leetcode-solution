@@ -1,4 +1,4 @@
-package org.dullnull.solution.medium;
+package org.dullnull.solution.dp;
 
 /**
  * @author iisheng
