@@ -1,6 +1,7 @@
 package org.dullnull.solution.tree;
 
 import org.dullnull.solution.common.TreeNode;
+import org.dullnull.solution.utils.TreeUtils;
 
 /**
  * @author iisheng
@@ -8,7 +9,7 @@ import org.dullnull.solution.common.TreeNode;
  */
 public class No_0236_LowestCommonAncestorOfABinaryTree {
 
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null || root == p || root == q) {
             return root;
         }
@@ -23,5 +24,13 @@ public class No_0236_LowestCommonAncestorOfABinaryTree {
         }
 
         return root;
+    }
+
+    public static void main(String[] args) {
+        TreeNode root = TreeUtils.createBinaryTree(new Integer[]{3, 5, 1, 6, 2, 0, 8, null, null, 7, 4});
+        TreeNode p = TreeUtils.getFirstNode(root, 5);
+        TreeNode q = TreeUtils.getFirstNode(root, 1);
+        TreeNode ancestor = lowestCommonAncestor(root, p, q);
+        System.out.println(ancestor.val);
     }
 }

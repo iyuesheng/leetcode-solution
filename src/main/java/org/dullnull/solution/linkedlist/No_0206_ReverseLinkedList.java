@@ -1,6 +1,7 @@
 package org.dullnull.solution.linkedlist;
 
 import org.dullnull.solution.common.ListNode;
+import org.dullnull.solution.utils.ListUtils;
 
 /**
  * @author iisheng
@@ -8,7 +9,7 @@ import org.dullnull.solution.common.ListNode;
  */
 public class No_0206_ReverseLinkedList {
 
-    public ListNode reverseList(ListNode head) {
+    public static ListNode reverseList(ListNode head) {
         ListNode newHead = null;
         while (head != null) {
             ListNode next = head.next;
@@ -17,5 +18,12 @@ public class No_0206_ReverseLinkedList {
             head = next;
         }
         return newHead;
+    }
+
+    public static void main(String[] args) {
+        ListNode head = ListUtils.createLinkedList(new Integer[]{1, 2, 3, 4, 5, null});
+        ListUtils.print(head);
+        ListNode reverseList = reverseList(head);
+        ListUtils.print(reverseList);
     }
 }
