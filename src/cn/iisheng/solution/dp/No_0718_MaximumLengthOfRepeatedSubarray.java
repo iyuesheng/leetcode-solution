@@ -52,9 +52,9 @@ public class No_0718_MaximumLengthOfRepeatedSubarray {
             }
         }
 
-        for (int i = 0; i < dp.length; i++) {
-            System.out.println(Arrays.toString(dp[i]));
-        }
+//        for (int i = 0; i < dp.length; i++) {
+//            System.out.println(Arrays.toString(dp[i]));
+//        }
 
         return result;
 
@@ -99,7 +99,6 @@ public class No_0718_MaximumLengthOfRepeatedSubarray {
                     dp[j + 1] = 0;
                 }
             }
-            System.out.println(Arrays.toString(dp));
         }
         return max;
     }

@@ -17,6 +17,8 @@ public class No_0583_DeleteOperationForTwoStrings {
         if (len2 == 0) {
             return len1;
         }
+
+        // 二维数组可用 一位数组 + 临时一位数组 替换掉
         int[][] dp = new int[len1][len2];
         dp[0][0] = word1.charAt(0) == word2.charAt(0) ? 1 : 0;
 
@@ -34,6 +36,8 @@ public class No_0583_DeleteOperationForTwoStrings {
 
         for (int i = 1; i < len1; i++) {
             for (int j = 1; j < len2; j++) {
+                // 此处赋值语句可优化
+                // dp[i - 1][j - 1] + 1 >=  Math.max(dp[i - 1][j], dp[i][j - 1])
                 dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
                 if (word1.charAt(i) == word2.charAt(j)) {
                     dp[i][j] = Math.max(dp[i][j], dp[i - 1][j - 1] + 1);
@@ -96,11 +100,15 @@ public class No_0583_DeleteOperationForTwoStrings {
     public static int minDistanceDpQuick2(String word1, String word2) {
         int len1 = word1.length();
         int len2 = word2.length();
+
+        // 使用一维数组
         int[] dp = new int[len2 + 1];
 
         for (int i = 0; i < len1; i++) {
+            // 借用临时数组temp，将二维dp数组降维
             int[] temp = new int[len2 + 1];
             for (int j = 0; j < len2; j++) {
+                // 优化基本解法的 赋值逻辑
                 if (word1.charAt(i) == word2.charAt(j)) {
                     temp[j + 1] = Math.max(temp[j + 1], dp[j] + 1);
                 } else {
