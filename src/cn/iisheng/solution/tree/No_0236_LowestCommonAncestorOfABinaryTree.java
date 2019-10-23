@@ -9,6 +9,22 @@ import cn.iisheng.solution.utils.TreeUtils;
  */
 public class No_0236_LowestCommonAncestorOfABinaryTree {
 
+    /**
+     * 问题解析
+     * <p>
+     * 情况1：根节点为空，直接返回NULL
+     * <p>
+     * 情况2：p或q中有一个为空，返回非空的那个
+     * <p>
+     * 情况3：p或q其中一个是另一个的祖先结点，返回是祖先结点的那个
+     * <p>
+     * 情况4：p和q分别位于他们最近公共结点的两侧
+     *
+     * @param root
+     * @param p
+     * @param q
+     * @return
+     */
     public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null || root == p || root == q) {
             return root;
