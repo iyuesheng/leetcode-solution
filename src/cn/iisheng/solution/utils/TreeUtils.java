@@ -88,6 +88,8 @@ public class TreeUtils {
                 list.offer(node.right);
             }
         }
+
+        System.out.println();
     }
 
 }
