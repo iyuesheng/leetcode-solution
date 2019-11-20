@@ -33,6 +33,28 @@ public class No_0690_EmployeeImportance {
         return res;
     }
 
+    public static int getImportanceDFS(List<Employee> employees, int id) {
+        int res = 0;
+        HashMap<Integer, Employee> map = new HashMap();
+        for (Employee e : employees) {
+            map.put(e.id, e);
+        }
+        res = dfs(map, id, res);
+        return res;
+    }
+
+    public static int dfs(HashMap<Integer, Employee> map, int id, int res) {
+        Employee employee = map.get(id);
+        int result = res;
+        if (employee != null) {
+            result += employee.importance;
+            for (Integer i : employee.subordinates) {
+                result += dfs(map, i, res);
+            }
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         List<Employee> list = new ArrayList<>();
         Employee employee1 = new Employee(1, 5, Arrays.asList(2, 3));
@@ -42,5 +64,6 @@ public class No_0690_EmployeeImportance {
         list.add(employee2);
         list.add(employee3);
         System.out.println(getImportance(list, 1));
+        System.out.println(getImportanceDFS(list, 1));
     }
 }
