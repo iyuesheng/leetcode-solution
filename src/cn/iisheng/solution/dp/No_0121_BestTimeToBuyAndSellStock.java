@@ -24,7 +24,7 @@ public class No_0121_BestTimeToBuyAndSellStock {
                 result = profit;
             }
         }
-        return Math.max(0, result);
+        return result;
     }
 
     public static void main(String[] args) {
