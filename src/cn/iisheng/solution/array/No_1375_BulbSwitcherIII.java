@@ -4,7 +4,7 @@ package cn.iisheng.solution.array;
  * @author iisheng
  * @date 2020/03/08 10:59:20
  */
-public class No_01375_BulbSwitcherIII {
+public class No_1375_BulbSwitcherIII {
 
     public static int numTimesAllBlue(int[] light) {
         int length = light.length;
