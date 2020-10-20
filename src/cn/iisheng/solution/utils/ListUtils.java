@@ -8,6 +8,11 @@ import cn.iisheng.solution.common.ListNode;
  */
 public class ListUtils {
 
+    /**
+     * 尾插法创建单链表
+     * @param values
+     * @return
+     */
     public static ListNode createLinkedList(Integer[] values) {
         if (values == null || values.length == 0) {
             return null;
@@ -24,6 +29,29 @@ public class ListUtils {
         }
         return head;
     }
+
+
+    /**
+     * 头插法创建单链表
+     * @param values
+     * @return
+     */
+    public static ListNode headCreateLinkedList(Integer[] values) {
+        if (values == null || values.length == 0) {
+            return null;
+        }
+
+        ListNode head = new ListNode(values[0]);
+        for (int i = 1; i < values.length; i++) {
+            if (values[i] != null) {
+                ListNode cur = new ListNode(values[i]);
+                cur.next = head;
+                head = cur;
+            }
+        }
+        return head;
+    }
+
 
     public static void print(ListNode head) {
         ListNode current = head;
