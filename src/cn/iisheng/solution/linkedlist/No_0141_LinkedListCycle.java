@@ -1,6 +1,7 @@
-package cn.iisheng.solution.twopointers;
+package cn.iisheng.solution.linkedlist;
 
 import cn.iisheng.solution.common.ListNode;
+import cn.iisheng.solution.utils.ListUtils;
 
 /**
  * @author iisheng
@@ -8,7 +9,7 @@ import cn.iisheng.solution.common.ListNode;
  */
 public class No_0141_LinkedListCycle {
 
-    public boolean hasCycle(ListNode head) {
+    public static boolean hasCycle(ListNode head) {
         ListNode fast = head;
         ListNode slow = head;
 
@@ -22,7 +23,11 @@ public class No_0141_LinkedListCycle {
                 return true;
             }
         }
+    }
 
+    public static void main(String[] args) {
+        ListNode head = ListUtils.headCreateLinkedList(new Integer[]{3, 2, 0, -4});
+        ListUtils.print(head);
     }
 
 }
