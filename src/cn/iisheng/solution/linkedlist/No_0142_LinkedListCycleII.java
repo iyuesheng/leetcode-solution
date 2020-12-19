@@ -4,22 +4,27 @@ import cn.iisheng.solution.common.ListNode;
 
 /**
  * @author iisheng
- * @date 2019/10/09 18:05:49
+ * @date 2020/12/19 22:18:44
  */
-public class No_0141_LinkedListCycle {
+public class No_0142_LinkedListCycleII {
 
-    public static boolean hasCycle(ListNode head) {
+    public ListNode detectCycle(ListNode head) {
         ListNode fast = head;
         ListNode slow = head;
 
         while (true) {
             if (fast == null || fast.next == null) {
-                return false;
+                return null;
             }
             fast = fast.next.next;
             slow = slow.next;
             if (fast == slow) {
-                return true;
+                ListNode ptr = head;
+                while (ptr != slow) {
+                    ptr = ptr.next;
+                    slow = slow.next;
+                }
+                return ptr;
             }
         }
     }
