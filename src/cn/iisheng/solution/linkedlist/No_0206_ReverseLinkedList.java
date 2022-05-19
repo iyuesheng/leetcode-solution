@@ -12,7 +12,9 @@ public class No_0206_ReverseLinkedList {
     public static ListNode reverseList(ListNode head) {
         // 整体思路
         // 定义一个 新的头节点
-        // 遍历 原链表 一个一个 加到新的头节点的前面 即可 实现 反转
+        // 遍历 原链表 一个一个 加到新的头节点的前面
+        // 将此时的链表头节点 赋值给 新的头节点
+        // 返回新的头节点 即反转后的链表
 
         // 定义一个新的头节点
         ListNode newHead = null;
