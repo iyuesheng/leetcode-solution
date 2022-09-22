@@ -5,6 +5,31 @@ package cn.iisheng.solution.divideconquer;
  * @date 2019/09/21 22:58:22
  */
 public class No_0053_MaximumSubarray {
+    
+    public static int maxSubArrayDp(int[] nums) {
+        if (nums == null) {
+            return 0;
+        }
+        int n = nums.length;
+        if (n == 0) {
+            return 0;
+        }
+        // 表示包含第i个点的最长连续子序列和
+        int[] dp = new int[n];
+        dp[0] = nums[0];
+        int max = dp[0];
+        for (int i = 1; i < n; i++) {
+            if (dp[i - 1] > 0) {
+                dp[i] = nums[i] + dp[i - 1];
+            } else {
+                dp[i] = nums[i];
+            }
+            if (max < dp[i]) {
+                max = dp[i];
+            }
+        }
+        return max;
+    }
 
     /**
      * 思路
